@@ -23,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -110,7 +110,7 @@
       <workItem from="1608671624655" duration="1094000" />
       <workItem from="1608727085314" duration="552000" />
       <workItem from="1608738789588" duration="4353000" />
-      <workItem from="1608743179781" duration="1556000" />
+      <workItem from="1608743179781" duration="1801000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo bug 404">
       <created>1608671873560</created>
