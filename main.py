@@ -30,5 +30,3 @@ while True:
                 print('Opção inválida.')
     except Exception as e:
         print(e)
-
-

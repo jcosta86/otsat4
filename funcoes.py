@@ -1,13 +1,19 @@
+from marketplace import Marketplace
+from category import Category
+
+mag_lu = Marketplace('Magazine Luiza', ['Eletronicos', 'Cozinha'])
+meli = Marketplace('Mercado Livre', ['Eletronicos', 'Suplementos'])
+
 marketplaces = [
     {
-        'name': 'Magazine Luiza',
+        'name': mag_lu,
         'id': 1
     },
     {
-        'name': 'Mercado Livre',
+        'name': meli,
         'id': 2
     }
-    ]
+]
 
 links = [
     {
@@ -29,8 +35,22 @@ menu = [
      'rota': '/subcategorias'}
 ]
 
-categories = ['Eletronicos', 'Suplementos', 'Camping']
+eletronicos = Category('Eletronicos', ['Tv', 'Radio'])
+suplementos = Category('Suplementos', ['Whey'])
+
+categories = [
+    {'nome': eletronicos},
+    {'nome': suplementos}
+    ]
 subcategories = ['Tv', 'Radio', 'Whey', 'Barraca', 'Cadeira dobravel']
+
+
+def lista_nome_marketplaces() -> list:
+    marketplace_names = []
+    for i in marketplaces:
+        name = i['name'].get_name()
+        marketplace_names.append(name)
+    return marketplace_names
 
 
 def lista_categorias_por_marketplace() -> str:
