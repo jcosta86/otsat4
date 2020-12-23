@@ -1,18 +1,45 @@
-marketplaces = ['Magazine Luiza', 'Mercado Livre']
+marketplaces = [
+    {
+        'name': 'Magazine Luiza',
+        'id': 1
+    },
+    {
+        'name': 'Mercado Livre',
+        'id': 2
+    }
+    ]
+
+links = [
+    {
+        'rota': '/',
+        'nome': 'Voltar'
+    },
+    {
+        'rota': 'http://www.olist.com',
+        'nome': 'olist'
+    }
+]
+
+menu = [
+    {'nome': 'Marketplaces',
+     'rota': '/marketplaces'},
+    {'nome': 'Categorias',
+     'rota': '/categorias'},
+    {'nome': 'Subcategorias',
+     'rota': '/subcategorias'}
+]
+
 categories = ['Eletronicos', 'Suplementos', 'Camping']
 subcategories = ['Tv', 'Radio', 'Whey', 'Barraca', 'Cadeira dobravel']
 
 
 def lista_categorias_por_marketplace() -> str:
-    mktplaces = str(marketplaces)
-    return mktplaces
+    return marketplaces
 
 
 def lista_categorias() -> str:
-    categories_ = str(categories)
-    return categories_
+    return categories
 
 
 def list_subcategories() -> str:
-    sub_categories = str(subcategories)
-    return sub_categories
+    return subcategories

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{{ nome }}</title>
+</head>
+<body>
+    <h1>{{ nome }}{% block titulo %}{% endblock %}</h1>
+    {% block corpo %}
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{% block corpo %}
+    <ul>
+    {% for i in lista %}
+        <h4>{{ i['name'] }}</h4>
+    {% endfor %}
+    </ul>
+    {% for i in links %}
+        <ul>
+            <a href="{{ i['rota'] }}">{{ i['nome'] }}</a>
+        </ul>
+    {% endfor %}
+{% endblock %}

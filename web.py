@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from funcoes import *
 
@@ -7,33 +7,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    h1 = '<h1>olist</h1>'
-    ol = '''
-            <ol> 
-                <li><a href='/marketplaces'>Marketplaces</a></li>
-                <li><a href='/categorias'>Categorias</a></li>
-                <li><a href='/subcategorias'>Subcategorias</a></li>
-            </ol>
-          '''
-    return f'{h1} {ol}'
+    return render_template('index.html', nome='olist', lista=menu)
 
 
 @app.route('/marketplaces')
 def show_marketplaces():
-    voltar = "<a href='/'>Voltar</a>"
-    return f'{lista_categorias_por_marketplace()} <br/> {voltar}'
+    lista = lista_categorias_por_marketplace()
+    return render_template('marketplaces.html', nome='olist', lista=lista, links=links)
 
 
 @app.route('/categorias')
 def show_categories():
-    voltar = "<a href='/'>Voltar</a>"
-    return f'{lista_categorias()} <br/> {voltar}'
+    return render_template('categorias.html', nome='olist', lista=lista_categorias(), links=links)
 
 
 @app.route('/subcategorias')
 def show_subcategories():
-    voltar = "<a href='/'>Voltar</a>"
-    return f'{list_subcategories()} <br/> {voltar}'
+    return render_template('categorias.html', nome='olist', lista=list_subcategories(), links=links)
 
 
 app.run(debug=True)
