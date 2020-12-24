@@ -1,13 +1,18 @@
 {% extends 'template.html' %}
 {% block corpo %}
     <ul>
-    {% for i in lista %}
-        <h4>{{ i }}</h4>
+    {% for sucategory in lista %}
+        <h4>{{ sucategory['name'].get_name() }}</h4>
+        {% for products in sucategory['name'].get_products() %}
+            <ul>
+                <h5>{{ products }}</h5>
+            </ul>
+        {% endfor %}
     {% endfor %}
     </ul>
-    {% for i in links %}
+    {% for link in links %}
         <ul>
-            <a href="{{ i['rota'] }}">{{ i['nome'] }}</a>
+            <a href="{{ link['rota'] }}">{{ link['nome'] }}</a>
         </ul>
     {% endfor %}
 {% endblock %}
