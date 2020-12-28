@@ -2,8 +2,8 @@
 {% block corpo %}
     <ul>
     {% for category in lista %}
-        <h4>{{ category['name'].get_name() }}</h4>
-        {% for subcategories in category['name'].get_subcategories() %}
+        <h4>{{ category['name'] }}</h4>
+        {% for subcategories in category['subcatecories']%}
             <ul>
                 <h5>{{ subcategories }}</h5>
             </ul>

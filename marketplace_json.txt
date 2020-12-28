@@ -1,0 +1,2 @@
+{"name": "Magazine Luiza", "categories": ["Eletronicos", "Cozinha"]}
+{"name": "Mercado Livre", "categories": ["Eletronicos", "Suplementos"]}

@@ -12,19 +12,19 @@ def index():
 
 @app.route('/marketplaces')
 def show_marketplaces():
-    lista = lista_categorias_por_marketplace()
+    lista = list_marketplaces()
     return render_template('marketplaces.html', nome='olist', lista=lista, links=links)
 
 
 @app.route('/categorias')
 def show_categories():
-    lista = lista_categorias()
+    lista = list_categories()
     return render_template('categorias.html', nome='olist', lista=lista, links=links)
 
 
 @app.route('/subcategorias')
 def show_subcategories():
-    lista = list_subcategories()
+    lista = lista_subcategories()
     return render_template('subcategorias.html', nome='olist', lista=lista, links=links)
 
 

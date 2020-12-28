@@ -2,8 +2,8 @@
 {% block corpo %}
     <ul>
     {% for marketplace in lista %}
-        <h4>{{ marketplace['name'].get_name() }}</h4>
-        {% for categories in marketplace['name'].get_categories() %}
+        <h4>{{ marketplace['name']}}</h4>
+        {% for categories in marketplace['categories'] %}
             <ul>
                 <h5>{{ categories }}</h5>
             </ul>
