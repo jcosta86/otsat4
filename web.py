@@ -28,4 +28,10 @@ def show_subcategories():
     return render_template('subcategorias.html', nome='olist', lista=lista, links=links)
 
 
+@app.route('/historico')
+def show_historico():
+    lista = lista_historico()
+    return render_template('historico.html', nome='olist', lista=lista, links=links)
+
+
 app.run(debug=True)

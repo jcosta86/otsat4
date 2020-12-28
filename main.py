@@ -3,7 +3,7 @@ from historico import ler_historico
 
 
 def menu() -> int:
-    options = ['Marketplaces', 'Categorias', 'Subcategorias', 'Sair']
+    options = ['Marketplaces', 'Categorias', 'Subcategorias', 'Log de uso',  'Sair']
 
     print('\n--------  olist  --------\n')
 
@@ -26,7 +26,7 @@ def listar_itens(list_: list, key_name: str, key_value: str) -> None:
 while True:
     try:
         op = menu()
-        if op == 4:
+        if op == 5:
             print('Até logo!')
             break
         else:
@@ -36,6 +36,10 @@ while True:
                 listar_itens(list_categories(), 'name', 'subcatecories')
             elif op == 3:
                 listar_itens(lista_subcategories(), 'name', 'products')
+            elif op == 4:
+                log_de_uso = lista_historico()
+                for i in log_de_uso:
+                    print(i)
             else:
                 print('Opção inválida.')
     except Exception as e:

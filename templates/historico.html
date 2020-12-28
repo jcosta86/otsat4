@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{% block corpo %}
+    <ul>
+    {% for linha in lista %}
+        <li>{{ linha }}</li>
+    {% endfor %}
+    </ul>
+    {% for link in links %}
+        <ul>
+            <a href="{{ link['rota'] }}">{{ link['nome'] }}</a>
+        </ul>
+    {% endfor %}
+{% endblock %}
