@@ -1,5 +1,4 @@
-from funcoes import *
-from historico import ler_historico
+from back.funcoes import *
 
 
 def menu() -> int:

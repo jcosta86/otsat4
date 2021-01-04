@@ -1,9 +1,9 @@
 from datetime import datetime
 
-from marketplace import Marketplace
-from category import Category
-from subcategory import Subcategory
-from historico import *
+from back.marketplace import Marketplace
+from back.category import Category
+from back.subcategory import Subcategory
+from back.historico import *
 
 mag_lu = Marketplace('Magazine Luiza', ['Eletronicos', 'Cozinha'])
 meli = Marketplace('Mercado Livre', ['Eletronicos', 'Suplementos'])
@@ -78,12 +78,12 @@ def salva_log_de_uso(nome_log: str) -> None:
     data_e_hora_atual = datetime.now()
     data_e_hora = data_e_hora_atual.strftime('%d/%m/%Y %H:%M:%S')
     linha_de_log = f'log: {nome_log} - Data e hora: {data_e_hora}'
-    salvar_historico(linha_de_log, 'historico_log.txt')
+    salvar_historico(linha_de_log, 'back/arquivos_de_dados/historico_log.txt')
 
 
 def salva_marketplace(mkt_place: Marketplace) -> None:
     marketplace = f"{'name':{mkt_place.get_name()},'categories': {mkt_place.get_categories()}}"
-    salvar_historico(marketplace, 'marketplace_json.txt')
+    salvar_historico(marketplace, 'back/arquivos_de_dados/marketplace_json.txt')
     salva_log_de_uso('salva_marketplace')
 
 
@@ -94,23 +94,23 @@ def cria_markeplace(name: str, categories_: list) -> Marketplace:
 
 
 def list_marketplaces() -> list:
-    lista_marketplaces = ler_historico('marketplace_json.txt')
+    lista_marketplaces = ler_historico('back/arquivos_de_dados/marketplace_json.txt')
     salva_log_de_uso('list_marketplace')
     return lista_marketplaces
 
 
 def list_categories() -> list:
-    lista_categorias = ler_historico('categories_json.txt')
+    lista_categorias = ler_historico('back/arquivos_de_dados/categories_json.txt')
     salva_log_de_uso('list_categories')
     return lista_categorias
 
 
 def lista_subcategories() -> list:
-    list_subcategories = ler_historico('subcategories_json.txt')
+    list_subcategories = ler_historico('back/arquivos_de_dados/subcategories_json.txt')
     salva_log_de_uso('list_subcategories')
     return list_subcategories
 
 def lista_historico() -> list:
-    lista = ler_log('historico_log.txt')
+    lista = ler_log('back/arquivos_de_dados/historico_log.txt')
     salva_log_de_uso('lista_historico')
     return lista

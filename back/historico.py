@@ -22,7 +22,7 @@ def ler_log(caminho) -> list:
     lista_linhas_arquivo = []
     arquivo = open(caminho, 'r')
     for linha in arquivo:
-        linha_limpa = linha.strip()  # retira caracteres de escape e espacos branco (\n \t \r ' ')
+        linha_limpa = linha.strip()
         lista_linhas_arquivo.append(linha_limpa)
     arquivo.close()
     return lista_linhas_arquivo
