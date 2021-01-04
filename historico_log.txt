@@ -1,5 +1,0 @@
-log: list_marketplace - Data e hora: 04/01/2021 12:20:05
-log: list_marketplace - Data e hora: 04/01/2021 12:22:38
-log: list_categories - Data e hora: 04/01/2021 12:22:40
-log: list_subcategories - Data e hora: 04/01/2021 12:22:43
-log: lista_historico - Data e hora: 04/01/2021 12:22:45
